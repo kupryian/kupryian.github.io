@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Что внутри айсберга? — What’s in the Iceberg?</title>
+<meta name="description" content="Растопите айсберг горелкой и узнайте, что вмёрзло в него тысячи лет назад. Игра для Android.">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root {
+    --sky: #eef6fc;
+    --ice: #d6e9f6;
+    --ink: #17324a;
+    --soft: #5d7a91;
+    --deep: #1e6fa8;
+    --flame: #e8742a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 80px;
+    background: linear-gradient(180deg, var(--sky), var(--ice));
+    background-attachment: fixed;
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; }
+  header {
+    display: flex; gap: 22px; align-items: center;
+    padding: 48px 0 12px;
+  }
+  header img { width: 112px; height: 112px; border-radius: 24px; flex: none;
+    box-shadow: 0 6px 20px rgba(23, 50, 74, .25); }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 4px; color: var(--deep); }
+  .sub { color: var(--soft); margin: 0; }
+  .lang { margin: 18px 0 28px; color: var(--soft); }
+  .btn {
+    display: inline-block; margin: 6px 0 0; padding: 10px 20px;
+    background: var(--flame); color: #fff; border-radius: 999px;
+    text-decoration: none; font-weight: 600;
+  }
+  .shots {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    margin: 28px 0;
+  }
+  .shots img { width: 100%; height: auto; border-radius: 12px; display: block;
+    box-shadow: 0 4px 14px rgba(23, 50, 74, .18); }
+  h2 {
+    font-size: 21px; margin: 38px 0 10px;
+    padding-top: 18px; border-top: 2px solid rgba(30, 111, 168, .2);
+  }
+  h3 { font-size: 18px; margin: 22px 0 4px; }
+  p, li { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  a { color: var(--deep); }
+  hr { border: 0; border-top: 3px double rgba(30, 111, 168, .3); margin: 64px 0 0; }
+  footer { margin-top: 48px; color: var(--soft); font-size: 15px; }
+  @media (max-width: 560px) {
+    header { flex-direction: column; align-items: flex-start; padding-top: 32px; }
+    h1 { font-size: 28px; }
+    .shots { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <img src="img/icon.png" alt="">
+  <div>
+    <h1>Что внутри айсберга?</h1>
+    <p class="sub">What’s in the Iceberg? — игра для Android</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.whatsintheiceberg.game">Google Play</a>
+  </div>
+</header>
+
+<p class="lang">Русский · <a href="#en">English</a></p>
+
+<p><strong>Растопите айсберг горелкой и узнайте, что вмёрзло в него тысячи лет назад.</strong></p>
+
+<p>Планета замерзает. Пятый год подряд температура падает, ледники подходят к
+городам, и учёные надеются найти ответ в древних льдах. Вертолёт высаживает вас
+на платформу у огромного айсберга — с палаткой, обогревателем, рацией и газовой
+горелкой. Дальше — вниз, в лёд.</p>
+
+<div class="shots">
+  <img src="img/2-platform.jpg" alt="Платформа у айсберга">
+  <img src="img/3-mammoth.jpg" alt="Мамонт во льду">
+  <img src="img/5-hare.jpg" alt="Саблезубый заяц">
+  <img src="img/4-jack.jpg" alt="Человек на обломке двери">
+</div>
+
+<h3>Растапливайте лёд</h3>
+<p>Горелка режет лёд там, куда вы её направите: прокладывайте ходы, спускайтесь
+в пещеры, вытапливайте находки. Глубже — темнее: берите налобный фонарь и
+крутите динамо, когда он садится.</p>
+
+<h3>Собирайте минералы</h3>
+<p>Аквамарин, пирит, магнетит, гранат, циркон, золото, уран и метеоритное
+железо — чем глубже, тем дороже. Продавайте их и улучшайте снаряжение.</p>
+
+<h3>Следите за холодом</h3>
+<p>Пока вы во льду, тепло уходит. Пробьёте стенку ниже уровня моря — ледяная
+вода хлынет в пещеру. А иногда с моря приходит метель.</p>
+
+<h3>Решите, чем всё кончится</h3>
+<p>Каждая находка меняет судьбу человечества — к лучшему или к худшему.
+Несколько финалов: выживут ли люди, и выживете ли вы сами.</p>
+
+<h2>Поддержка</h2>
+<p>Вопросы и ошибки: <a href="mailto:jeux.developpeur@gmail.com">jeux.developpeur@gmail.com</a><br>
+<a href="https://kupryian.github.io/iceberg-privacy/">Политика конфиденциальности</a></p>
+
+<hr id="en">
+
+<h2 style="border:0;padding-top:0">What’s in the Iceberg?</h2>
+<p class="lang"><a href="#">Русский</a> · English</p>
+
+<p><strong>Melt an iceberg with a torch and find what froze inside it ages ago.</strong></p>
+
+<p>The planet is freezing. For the fifth year running the temperature keeps
+falling, glaciers creep towards the cities, and scientists hope the answer lies
+in ancient ice. A helicopter drops you on a platform beside a huge iceberg —
+with a tent, a heater, a radio and a gas torch. From here on, it is down into
+the ice.</p>
+
+<div class="shots">
+  <img src="img/6-shield.jpg" alt="An ancient shield in the ice">
+  <img src="img/7-news.jpg" alt="News from the mainland">
+</div>
+
+<ul>
+  <li>Melt the ice freely: every cave is yours to dig</li>
+  <li>8 kinds of minerals and 8 finds with a story</li>
+  <li>Cold, water, blizzards, grenades, a winch rope and a dynamo headlamp</li>
+  <li>News from the mainland about every find you hand over</li>
+  <li>Several endings</li>
+</ul>
+
+<h2>Support</h2>
+<p>Questions and bug reports: <a href="mailto:jeux.developpeur@gmail.com">jeux.developpeur@gmail.com</a><br>
+<a href="https://kupryian.github.io/iceberg-privacy/">Privacy policy</a></p>
+
+<footer>© 2026 P.Aleks</footer>
+
+</main>
+</body>
+</html>
