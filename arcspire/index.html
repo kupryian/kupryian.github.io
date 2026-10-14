@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcspire — одно касание, ещё выше</title>
+  <meta name="description" content="Arcspire — аркада для Android: запускайте шар между орбитами одним касанием. 5 000 уровней, бесконечный режим и ежедневные испытания.">
+  <meta name="theme-color" content="#080f20">
+  <link rel="canonical" href="https://kupryian.github.io/arcspire/">
+  <link rel="icon" href="img/icon.png" type="image/png">
+  <meta property="og:title" content="Arcspire — one tap, one more climb">
+  <meta property="og:description" content="One-tap orbital arcade for Android. 5,000 levels, Endless mode and Daily challenges.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kupryian.github.io/arcspire/">
+  <meta property="og:image" content="https://kupryian.github.io/arcspire/img/feature.png">
+  <style>
+    :root { color-scheme: dark; --bg: #080f20; --panel: #111b30; --ink: #eef5ff; --muted: #a7b8d4; --cyan: #69e5fa; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; color: var(--ink); background: radial-gradient(ellipse at 90% 0%, #173852 0, transparent 45%), var(--bg); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; overflow-wrap: anywhere; }
+    main { width: min(1040px, calc(100% - 40px)); margin: auto; }
+    a { color: var(--cyan); text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 0; font-size: 14px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 750; letter-spacing: .15em; }
+    .brand img { width: 36px; height: 36px; border-radius: 10px; }
+    .navlinks { display: flex; gap: 22px; }
+    .hero { padding: 36px 0 48px; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 32px; }
+    .eyebrow { color: var(--cyan); font-size: 13px; font-weight: 650; letter-spacing: .17em; text-transform: uppercase; }
+    h1 { font-size: clamp(38px, 5.8vw, 68px); line-height: 1.08; letter-spacing: -.035em; margin: 18px 0 22px; }
+    .lead { color: var(--muted); font-size: 19px; max-width: 520px; }
+    .hero-art { width: 100%; border-radius: 24px; border: 1px solid #29405b; }
+    .button { display: inline-block; padding: 13px 24px; background: var(--cyan); color: #081522; border-radius: 999px; text-decoration: none; font-weight: 750; margin-top: 14px; }
+    .status { color: var(--muted); font-size: 13px; margin: 12px 0 0; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #263751; border-radius: 20px; overflow: hidden; background: #111b3099; }
+    .facts div { padding: 24px; }
+    .facts div + div { border-left: 1px solid #263751; }
+    .facts strong { display: block; font-size: 25px; }
+    .facts span { color: var(--muted); font-size: 14px; }
+    section { padding: 54px 0 0; }
+    h2 { font-size: 29px; letter-spacing: -.02em; margin: 0 0 15px; }
+    h3 { font-size: 19px; margin: 0 0 10px; }
+    p { margin: 12px 0; }
+    .intro { color: var(--muted); max-width: 760px; }
+    .shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+    figure { margin: 0; }
+    .shots img { display: block; width: 100%; height: auto; border-radius: 17px; border: 1px solid #2d4263; }
+    figcaption { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+    .card { background: var(--panel); border: 1px solid #25364e; border-radius: 20px; padding: 25px; }
+    .card p { color: var(--muted); font-size: 15px; }
+    .support { margin-top: 54px; padding: 32px; background: #102638; border: 1px solid #294961; border-radius: 20px; }
+    .support p { color: var(--muted); }
+    details { border-top: 1px solid #263751; margin-top: 52px; padding-top: 25px; }
+    summary { cursor: pointer; font-size: 20px; font-weight: 650; }
+    .english { padding-top: 18px; max-width: 780px; color: var(--muted); }
+    .english h2 { color: var(--ink); margin-top: 20px; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 38px 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; padding-top: 20px; } .hero-art { max-width: 520px; } .features { grid-template-columns: 1fr; } .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 420px) { main { width: calc(100% - 28px); } .navlinks { gap: 12px; } .facts div { padding: 18px 10px; } .facts strong { font-size: 20px; } .facts span { font-size: 12px; } .support { padding: 23px; } footer { flex-direction: column; gap: 8px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+<main>
+  <nav aria-label="Основная навигация">
+    <a class="brand" href="./"><img src="img/icon.png" alt="" width="36" height="36">ARCSPIRE</a>
+    <div class="navlinks"><a href="#support">Поддержка</a><a href="#en" lang="en">English</a></div>
+  </nav>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Аркада для Android</p>
+      <h1>Одно касание.<br>Ещё выше.</h1>
+      <p class="lead">Поймайте момент и запустите шар на следующую орбиту. Простое управление. Точная траектория. Ещё одна попытка.</p>
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.arcspire.game">Arcspire в Google Play</a>
+      <p class="status">Закрытое тестирование · доступ к установке зависит от участия в тесте.</p>
+    </div>
+    <img class="hero-art" src="img/feature.png" alt="Arcspire: светящийся шар движется между орбитами" width="1024" height="500" fetchpriority="high">
+  </header>
+  <div class="facts" aria-label="Особенности игры">
+    <div><strong>5 000</strong><span>уровней кампании</span></div>
+    <div><strong>1 касание</strong><span>для запуска шара</span></div>
+    <div><strong>Офлайн</strong><span>играйте без интернета</span></div>
+  </div>
+  <section aria-labelledby="gameplay">
+    <h2 id="gameplay">Попасть в орбиту — только начало</h2>
+    <p class="intro">Шар вращается по орбите. Коснитесь экрана, чтобы он полетел по касательной к следующей. Дальше меняются расстояния, ритм и условия: каждое движение требует своего момента.</p>
+    <div class="shots">
+      <figure><a href="img/dawn.png"><img src="img/dawn.png" alt="Arcspire: уровень 12, белый шар на орбите в мире Dawn" width="1080" height="1920" loading="lazy"></a><figcaption>Начните с точного касания</figcaption></figure>
+      <figure><a href="img/neon.png"><img src="img/neon.png" alt="Arcspire: уровень 125 с неоновыми орбитами" width="1080" height="1920" loading="lazy"></a><figcaption>Освойте новые траектории</figcaption></figure>
+      <figure><a href="img/endless.png"><img src="img/endless.png" alt="Arcspire: бесконечный режим в мире Ocean" width="1080" height="1920" loading="lazy"></a><figcaption>Побейте свой рекорд</figcaption></figure>
+      <figure><a href="img/constellation.png"><img src="img/constellation.png" alt="Arcspire: созвездие из звёзд за пройденные уровни" width="1080" height="1920" loading="lazy"></a><figcaption>Соберите своё созвездие</figcaption></figure>
+    </div>
+  </section>
+  <section aria-labelledby="modes">
+    <h2 id="modes">Всегда есть следующая цель</h2>
+    <div class="features">
+      <article class="card"><h3>Кампания и Master Sector</h3><p>Пройдите 5 000 уровней в разных мирах и доберитесь до дополнительных испытаний Master Sector.</p></article>
+      <article class="card"><h3>Endless и Daily</h3><p>Поднимайтесь как можно дальше в бесконечном режиме или возвращайтесь за ежедневным испытанием.</p></article>
+      <article class="card"><h3>Модули и облик</h3><p>Выбирайте модули под свой стиль и открывайте косметические предметы за заработанный в игре Flux.</p></article>
+    </div>
+  </section>
+  <section class="support" id="support" aria-labelledby="support-title">
+    <h2 id="support-title">Поддержка и конфиденциальность</h2>
+    <p>Нашли ошибку или хотите задать вопрос? Напишите нам и укажите модель устройства и версию игры.</p>
+    <p><a href="mailto:jeux.developpeur@gmail.com">jeux.developpeur@gmail.com</a></p>
+    <p><a href="https://kupryian.github.io/arcspire-privacy/">Политика конфиденциальности / Privacy policy</a></p>
+    <p>Текущая версия сохраняет прогресс на устройстве. Без регистрации, рекламы и покупок за реальные деньги.</p>
+  </section>
+  <details id="en" open lang="en">
+    <summary>English — About Arcspire</summary>
+    <div class="english">
+      <h2>One tap. One more climb.</h2>
+      <p>Arcspire is an offline arcade game for Android. Tap at the right moment to launch an orb along a tangent and land on the next orbit. Learn the rhythm, find your trajectory and keep climbing.</p>
+      <ul><li>5,000 campaign levels and additional Master Sector challenges.</li><li>Endless mode for personal records and Daily challenges.</li><li>Modules, cosmetic customization and a constellation of completed levels.</li><li>Local progress saving and accessibility settings.</li></ul>
+      <p>The current version has no accounts, advertisements or real-money purchases. Arcspire is in closed testing; installation depends on access to the test.</p>
+      <p><a href="https://play.google.com/store/apps/details?id=com.arcspire.game">Arcspire on Google Play</a> · <a href="https://kupryian.github.io/arcspire-privacy/">Privacy policy</a> · <a href="mailto:jeux.developpeur@gmail.com">Contact support</a></p>
+    </div>
+  </details>
+  <footer><span>© 2026 P.Aleks · Arcspire</span><a href="https://kupryian.github.io/">Все игры / All games</a></footer>
+</main>
+</body>
+</html>
